@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "WinMeter",
+  "version": "0.1.0",
+  "identifier": "com.winmeter.desktop",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "WinMeter",
+        "label": "main",
+        "width": 1120,
+        "height": 740,
+        "minWidth": 900,
+        "minHeight": 620,
+        "center": true,
+        "decorations": false,
+        "resizable": true,
+        "backgroundColor": "#f4f6fa",
+        "additionalBrowserArgs": "--disable-gpu --disable-gpu-process-crash-limit --disable-gpu-watchdog --disable-features=msWebOOUI,msPdfOOUI"
+      },
+      {
+        "title": "WinMeter · 资源速览",
+        "label": "popup",
+        "url": "popup.html",
+        "width": 1280,
+        "height": 570,
+        "visible": false,
+        "focus": false,
+        "decorations": false,
+        "resizable": false,
+        "skipTaskbar": true,
+        "alwaysOnTop": true,
+        "transparent": true,
+        "shadow": false,
+        "additionalBrowserArgs": "--disable-gpu --disable-gpu-process-crash-limit --disable-gpu-watchdog --disable-features=msWebOOUI,msPdfOOUI"
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src ipc: http://ipc.localhost; object-src 'none'; base-uri 'self'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "nsis"
+    ],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ],
+    "resources": {
+      "hardware/runtime/": "hardware/",
+      "../LICENSE": "LICENSE"
+    },
+    "shortDescription": "Windows 系统资源监控工具",
+    "windows": {
+      "webviewInstallMode": {
+        "type": "offlineInstaller",
+        "silent": true
+      },
+      "allowDowngrades": false,
+      "nsis": {
+        "installMode": "currentUser",
+        "languages": [
+          "SimpChinese",
+          "English"
+        ],
+        "displayLanguageSelector": true,
+        "installerHooks": "installer/hooks.nsh"
+      }
+    },
+    "license": "MIT",
+    "licenseFile": "../LICENSE"
+  }
+}

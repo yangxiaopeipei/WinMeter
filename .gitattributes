@@ -1,0 +1,19 @@
+* text=auto
+*.rs text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.ps1 text eol=crlf
+*.nsh text eol=crlf
+*.dll binary
+*.exe binary
+*.ico binary
+*.png binary
+*.icns binary
+*.zip binary
+
+# Preserve pinned upstream files byte-for-byte for SHA256 verification.
+/src-tauri/hardware/vendor/* -text
+/src-tauri/hardware/licenses/* -text

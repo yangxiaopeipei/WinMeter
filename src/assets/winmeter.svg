@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="base" x1="64" y1="32" x2="448" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2979F2"/>
+      <stop offset="1" stop-color="#1744AC"/>
+    </linearGradient>
+  </defs>
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#base)"/>
+  <!-- Broad, open dial stays legible in the taskbar and notification area. -->
+  <path d="M134 342 A154 154 0 1 1 378 342" fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round"/>
+  <path d="M256 132 V154 M158 179 L174 195 M354 179 L338 195" fill="none" stroke="#FFFFFF" stroke-opacity=".65" stroke-width="20" stroke-linecap="round"/>
+  <path d="M244 270 L339 214 L283 309 Z" fill="#66F0D1"/>
+  <circle cx="256" cy="288" r="28" fill="#FFFFFF"/>
+  <path d="M212 384 H300" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round"/>
+</svg>
